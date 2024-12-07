@@ -1,0 +1,94 @@
+/* estilocuadros.css */
+
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+center {
+    margin-top: 50px;
+}
+
+/* Estilo para tablas */
+table {
+    background-color: #fff;
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+table td {
+    padding: 20px;
+    text-align: left;
+}
+
+/* Estilo para inputs y textarea */
+textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Estilo para etiquetas */
+label {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+/* Estilo del botón */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo de mensajes */
+p {
+    text-align: center;
+    font-size: 16px;
+    color: #28a745;
+}
+
+p.error {
+    color: #dc3545;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+    }
+
+    textarea {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

@@ -1,4 +1,14 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilocuadros.css">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <?php
 // Incluir archivos necesarios
 include('cabecerainvestigador.php');
 include('conexion.php');
@@ -37,32 +47,42 @@ $result_proyectos = mysqli_query($cn, $sql_proyectos);
 // Verificar si se encontraron proyectos
 if (mysqli_num_rows($result_proyectos) > 0) {
     // Mostrar los proyectos en una tabla
-    echo "<table border='1'>
-            <thead>
-                <tr>
-                    <th>Nombre del Proyecto</th>
-                    <th>Dirección</th>
-                    <th>Actualizar Proyecto</th>
-                    <th>Cuadro de Diagnóstico</th>
-                </tr>
-            </thead>
-            <tbody>";
-    while ($row = mysqli_fetch_assoc($result_proyectos)) {
-        // Enlaces para actualizar el proyecto y ver el cuadro de diagnóstico
-        $actualizar_link = "actualizaproyecto.php?idproyecto=" . $row['idproyecto'];
-        $alimentar_link = "alimentar.php?idproyecto=" . $row['idproyecto'];
-        
-        echo "<tr>
-                <td>" . htmlspecialchars($row['pnombre']) . "</td>
-                <td>" . htmlspecialchars($row['direccion']) . "</td>
-                <td><a href='$actualizar_link'>Actualizar Proyecto</a></td>
-                <td><a href='$alimentar_link'>Cuadro de Diagnóstico</a></td>
-              </tr>";
-    }
-    echo "</tbody></table>";
+// Mostrar los proyectos en una tabla con clase CSS
+echo "<table class='tabla-proyectos'>
+        <thead>
+            <tr>
+                <th>Nombre del Proyecto</th>
+                <th>Dirección</th>
+                <th>Actualizar Proyecto</th>
+                <th>Alimentar</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>";
+while ($row = mysqli_fetch_assoc($result_proyectos)) {
+    $actualizar_link = "actualizaproyecto.php?idproyecto=" . $row['idproyecto'];
+    $alimentar_link = "alimentarproyecto.php?idproyecto=" . $row['idproyecto'];
+    $editar_link = "actualizaraporte.php?idproyecto=" . $row['idproyecto'];
+    $eliminar_link = "eliminaraporte.php?idproyecto=" . $row['idproyecto'];
+    echo "<tr>
+            <td>" . htmlspecialchars($row['pnombre']) . "</td>
+            <td>" . htmlspecialchars($row['direccion']) . "</td>
+            <td><a href='$actualizar_link'>Actualizar Proyecto</a></td>
+            <td><a href='$alimentar_link'>Alimentar</a></td>
+            <td><a href='$editar_link'>Editar Aportes</a></td>
+            <td><a href='$eliminar_link'>Eliminar Aportes</a></td>
+          </tr>";
+}
+echo "</tbody></table>";
+
 } else {
     echo "No se han encontrado proyectos para este investigador.";
 }
 
 mysqli_close($cn);
 ?>
+
+    </center>    
+</body>
+</html>

@@ -1,6 +1,6 @@
 <?php
 //session_start();
-include('cabeceraasesor.php.php');
+include('cabeceraasesor.php');
 include('conexion.php');
 include('auth.php'); // Verifica la autenticación
 

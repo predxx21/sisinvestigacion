@@ -14,7 +14,7 @@
     <header>
         <div class="header-container">
             <img src="img/Logo_UNJFSC.png" alt="Logo UNJFSC" class="logo">
-            <h1>CENTRO PRE UNIVERSITARIO</h1>
+            <h1>SISTEMA DE INVESTIGACION</h1>
         </div>
     </header>
     <center>
@@ -25,7 +25,7 @@
                 <li class="has-sub"><a href="#"><span>Actualizar</span></a>
                     <ul>
                         <li><a href="actualizar_datos.php"><span>Datos Personales</span></a></li>
-                        <li><a href="actualizar_foto.php"><span>Cambiar Foto de Perfil</span></a></li>
+                        <li><a href="actualizarimg_i.php"><span>Cambiar Foto de Perfil</span></a></li>
                         <li class="last"><a href="actualizar_contrasena.php"><span>Cambiar Contraseña</span></a></li>
                     </ul>
                 </li>

@@ -1,0 +1,38 @@
+/* Estilos generales para tablas */
+.tabla-proyectos {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background-color: #f0f8ff; /* Azul claro */
+}
+
+.tabla-proyectos thead {
+    background-color: #4a90e2; /* Azul más oscuro */
+    color: white;
+}
+
+.tabla-proyectos th,
+.tabla-proyectos td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+.tabla-proyectos tbody tr:nth-child(even) {
+    background-color: #e6f7ff; /* Azul muy suave para filas pares */
+}
+
+.tabla-proyectos tbody tr:hover {
+    background-color: #d1eaff; /* Resaltado al pasar el mouse */
+}
+
+.tabla-proyectos a {
+    color: #0073e6; /* Azul de los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tabla-proyectos a:hover {
+    text-decoration: underline;
+}

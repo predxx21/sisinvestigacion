@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Confirmar la transacción
         mysqli_commit($cn);
         echo "Registro completado exitosamente.";
+        header('location: verproyecto.php');
        
     } catch (Exception $e) {
         // Revertir la transacción en caso de error

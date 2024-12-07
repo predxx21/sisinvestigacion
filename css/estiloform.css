@@ -1,0 +1,81 @@
+
+
+/* Contenedor del formulario */
+form {
+    background-color: #ffffff; /* Blanco puro */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+}
+
+/* Estilo de los títulos y etiquetas */
+form label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; /* Gris oscuro */
+    margin-bottom: 8px;
+}
+
+/* Estilo para los campos de entrada */
+form input[type="text"],
+form input[type="hidden"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #d0d7de;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto al enfocar los campos de texto */
+form input[type="text"]:focus {
+    border-color: #4a90e2; /* Azul */
+    outline: none;
+    background-color: #f4f8fc; /* Azul muy claro */
+}
+
+/* Estilo para el botón */
+form input[type="submit"] {
+    background-color: #4a90e2; /* Azul */
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover y clic en el botón */
+form input[type="submit"]:hover {
+    background-color: #357ab8; /* Azul más oscuro */
+}
+
+form input[type="submit"]:active {
+    transform: scale(0.98); /* Efecto de clic */
+}
+
+/* Placeholder estilizado */
+form input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Espaciado entre campos */
+form {
+    margin-bottom: 15px;
+}
+
+/* Centrado del formulario */
+form {
+    text-align: left;
+}

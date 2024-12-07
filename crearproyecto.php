@@ -1,11 +1,10 @@
 <?php
 include("./auth.php");
 include("./conexion.php");
-//include("./CABECERA2.php");
+include("cabecerainvestigador.php");
 
 $found_investigator =
     $_SESSION["codigo"];
-echo $found_investigator;
 $sql = "select * from investigador where codigo=$found_investigator";
 
 $fila = mysqli_query($cn, $sql);
@@ -21,10 +20,14 @@ $r = mysqli_fetch_assoc($fila);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloform.css">
+
     <title>Document</title>
 </head>
 
 <body>
+    <br>
+    <center>
     <form action="./p_crearProyecto.php" method="post">
         <label for="txtnombreP">Nombre Proyecto:</label>
         <input type="text" name="txtnombreP">
@@ -47,6 +50,7 @@ $r = mysqli_fetch_assoc($fila);
     
 
     </form>
+    </center>
 </body>
 
 </html>
