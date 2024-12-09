@@ -61,7 +61,7 @@ echo "<table class='tabla-proyectos'>
         </thead>
         <tbody>";
 while ($row = mysqli_fetch_assoc($result_proyectos)) {
-    $actualizar_link = "actualizaproyecto.php?idproyecto=" . $row['idproyecto'];
+    $actualizar_link = "crearproyecto.php?idproyecto=" . $row['idproyecto'];
     $alimentar_link = "alimentarproyecto.php?idproyecto=" . $row['idproyecto'];
     $editar_link = "actualizaraporte.php?idproyecto=" . $row['idproyecto'];
     $eliminar_link = "eliminaraporte.php?idproyecto=" . $row['idproyecto'];

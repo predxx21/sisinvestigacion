@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <title>Alimentar Proyecto</title>
 </head>
+
 <body>
     <center>
         <?php
@@ -58,7 +60,23 @@
                         <label><input type="radio" name="idtipoaporte" value="1"> Síntoma</label>
                         <label><input type="radio" name="idtipoaporte" value="2"> Causa</label>
                         <label><input type="radio" name="idtipoaporte" value="3"> Pronóstico</label>
-                        <label><input type="radio" name="idtipoaporte" value="4"> Control de Pronóstico</label>
+                        <?php
+                        $sql = "select * from proyecto where idproyecto=$idproyecto";
+                        $f = mysqli_query($cn, $sql);
+                        $r = mysqli_fetch_assoc($f);
+                        $idtipoproyecto = $r["idtipoproyecto"];
+                        $Sql_tip = "select * from tipoproyecto where idtipoproyecto=$idtipoproyecto";
+                        $f_t = mysqli_query($cn, $Sql_tip);
+                        $r_t = mysqli_fetch_assoc($f_t);
+
+                        if (($r_t["nombre"] != "Descriptivo")) {
+
+
+                        ?>
+                            <label><input type="radio" name="idtipoaporte" value="4"> Control de Pronóstico</label>
+
+                        <?php } ?>
+
                     </td>
                 </tr>
                 <tr>
@@ -77,4 +95,5 @@
         </form>
     </center>
 </body>
+
 </html>

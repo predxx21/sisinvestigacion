@@ -1,7 +1,7 @@
 <?php
 
 /*CONEXION */
-$cn=mysqli_connect("localhost", "root","","bdinvestigacion");
+$cn=mysqli_connect("localhost", "root","","grupo");
 
 
 
