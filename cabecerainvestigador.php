@@ -35,7 +35,7 @@
                         <li><a href="crearproyecto.php"><span>Crear Proyecto</span></a></li>
                     </ul>
                 </li>
-                <li><a href="contactenos.php"><span>Cuadro de Diagnostico</span></a></li>
+                <li><a href="cuadro_diagnostico.php"><span>Cuadro de Diagnostico</span></a></li>
                 <li class="last"><a href="cerrarsesion.php"><span>Cerrar Sesión</span></a></li>
             </ul>
         </div>
