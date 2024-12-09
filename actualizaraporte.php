@@ -1,6 +1,8 @@
 <?php
 include('conexion.php');
 include('auth.php');
+include('cabecerainvestigador.php');
+
 
 // Verificar autenticación
 if (!isset($_SESSION["codigo"])) {
